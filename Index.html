@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Essential Highlights Technologies Training Centre</title>
+  <style>
+    :root{
+      --purple:#4b0082;
+      --gold:#ffd700;
+      --bg:#f6f4fb;
+      --card:#ffffff;
+      --accent-shadow:0 6px 18px rgba(75,0,130,0.18);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#222}
+
+    /* HEADER */
+    header{
+      position:relative;
+      min-height:380px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background-image:url('your-background-photo.jpg'); /* ✅ Replace */
+      background-size:cover;
+      background-position:center;
+      padding:48px 20px;
+      overflow:hidden;
+    }
+    header::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.35));
+    }
+    .header-inner{position:relative;z-index:2;max-width:1100px;width:100%;}
+    .logo-box img{
+      width:140px;
+      height:auto;
+      display:block;
+      margin:0 auto 14px;
+      border-radius:12px;
+      box-shadow:0 4px 18px rgba(0,0,0,0.25);
+    }
+
+    .title-main{
+      margin:6px 0 4px;
+      font-size:34px;
+      letter-spacing:1px;
+      color:transparent;
+      background:linear-gradient(90deg,var(--gold),#ffd966 40%,var(--purple));
+      -webkit-background-clip:text;
+      background-clip:text;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+    .title-sub{
+      margin:0;
+      font-size:22px;
+      color:var(--gold);
+      font-weight:700;
+      text-transform:uppercase;
+    }
+    p.about-text{
+      margin:14px auto 20px;
+      max-width:750px;
+      color:rgba(255,255,255,0.92);
+      font-weight:500;
+      line-height:1.6;
+    }
+
+    /* Program Button */
+    .program-btn{
+      display:inline-block;
+      padding:14px 26px;
+      margin-top:12px;
+      border-radius:12px;
+      background:linear-gradient(90deg,var(--gold),#f9e07f);
+      color:var(--purple);
+      font-weight:800;
+      text-decoration:none;
+      box-shadow:0 6px 18px rgba(0,0,0,0.25);
+      transition:transform .25s;
+    }
+    .program-btn:hover{transform:scale(1.05)}
+
+    nav{display:flex;justify-content:center;gap:18px;padding:12px;background:linear-gradient(90deg,var(--purple),#3b006b);}
+    nav a{color:var(--gold);text-decoration:none;font-weight:700}
+
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+
+    .shout-wrap{display:flex;justify-content:center;margin-top:18px}
+    .shout{
+      padding:18px 34px;
+      background:linear-gradient(90deg,#f7d86b,var(--gold));
+      color:var(--purple);
+      font-weight:900;
+      border-radius:36px;
+      font-size:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.18);
+      animation:pulse 1.8s infinite;
+    }
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+
+    .phases{margin-top:22px;display:grid;grid-template-columns:1fr;gap:16px}
+    .phase{background:var(--card);padding:18px;border-radius:12px;border-left:8px solid var(--purple);box-shadow:var(--accent-shadow);opacity:0;transform:translateY(16px) scale(.98);transition:all .7s ease}
+    .phase.in-view{opacity:1;transform:translateY(0) scale(1)}
+    .phase h3{margin:0 0 8px;color:var(--purple);font-size:18px}
+    .phase ul{margin:0;padding-left:18px;color:#333}
+
+    .gallery{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .gallery img,.gallery video{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:10px;
+      border:4px solid #fff;
+      box-shadow:0 12px 30px rgba(75,0,130,0.12);
+      transition:transform .35s;
+      background:#000;
+    }
+    .gallery img:hover,.gallery video:hover{transform:scale(1.04)}
+
+    .booking{margin:36px 0;text-align:center}
+    .wa-btn{display:inline-flex;align-items:center;gap:12px;padding:14px 22px;border-radius:12px;background:linear-gradient(90deg,var(--purple),#3b006b);color:var(--gold);text-decoration:none;font-weight:800}
+
+    footer{padding:26px;text-align:center;background:linear-gradient(90deg,var(--purple),#3b006b);color:var(--gold);margin-top:40px}
+
+    @media (min-width:900px){
+      .phases{grid-template-columns:repeat(2,1fr)}
+      header{min-height:420px}
+      .gallery img,.gallery video{height:200px}
+    }
+  </style>
+</head>
+<body>
+
+<header id="hero">
+  <div class="header-inner">
+    <div class="logo-box">
+      <!-- ✅ Replace logo.png with your PNG logo -->
+      <img src="logo.png" alt="Essential Highlights Logo">
+    </div>
+    <h1 class="title-main">Essential Highlights Technologies</h1>
+    <h2 class="title-sub">TRAINING CENTRE</h2>
+
+    <!-- ✅ About Us text -->
+    <p class="about-text">
+      At Essential Highlights Technologies Training Centre, we equip learners with practical tech
+      skills that empower them for today’s digital world. Our programs combine modern tools,
+      hands-on projects, and mentorship to help you build a strong career foundation.
+    </p>
+
+    <!-- ✅ Program button -->
+    <a href="#booking" class="program-btn">FAST-PACED 4-MONTH FULL-STACK WEB DEVELOPMENT PROGRAM</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#program">Program</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#booking">Book Now</a>
+</nav>
+
+<main class="container">
+  <div class="shout-wrap">
+    <div class="shout">KSH 15,000 PER MONTH</div>
+  </div>
+
+  <section class="phases" id="program">
+    <article class="phase"><h3>Phase 1 — Web Foundations</h3><ul><li>HTML5/CSS3</li><li>Tailwind CSS</li></ul></article>
+    <article class="phase"><h3>Phase 2 — Python Backend</h3><ul><li>Python Basics</li><li>Flask Routes & Templates</li></ul></article>
+    <article class="phase"><h3>Phase 3 — Databases & APIs</h3><ul><li>SQL & ORM</li><li>REST APIs</li></ul></article>
+    <article class="phase"><h3>Phase 4 — Advanced Backend</h3><ul><li>Authentication</li><li>Deployment</li></ul></article>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="pic1.jpg" alt="pic1">
+      <img src="pic2.jpg" alt="pic2">
+      <img src="pic3.jpg" alt="pic3">
+      <img src="pic4.jpg" alt="pic4">
+      <!-- ✅ MP4 video inside gallery -->
+      <video controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <section id="booking" class="booking">
+    <h2>Book Your Slot</h2>
+    <p>Reserve your place via WhatsApp</p>
+    <a class="wa-btn" href="https://wa.me/254720553292" target="_blank">📞 +254 720 553 292</a>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Essential Highlights Technologies Training Centre — All rights reserved.
+</footer>
+
+<script>
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.15});
+  document.querySelectorAll('.phase').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
